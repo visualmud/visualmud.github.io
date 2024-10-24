@@ -1,1 +1,178 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f1e5; /* Muddy background color placeholder */
+    background-image: url('../assets/images/mud-background.jpg'); /* Your AI-generated mud background */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(45, 40, 35, 0.9); /* Semi-transparent dark background */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    color: #e0a838; /* Brownish-yellowish color */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #e0a838;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #d9534f; /* Punk-inspired hover color */
+}
+
+/* Home Page */
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent container */
+    margin: 20px;
+    border: 2px solid #e0a838;
+}
+
+.home-image, .tour-list {
+    flex: 1 1 300px;
+    padding: 20px;
+}
+
+.home-image img {
+    width: 100%;
+    height: auto;
+    border: 5px solid #333;
+}
+
+.tour-list h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tour-list ul {
+    list-style-type: none;
+}
+
+.tour-list li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* About Page */
+.about-container {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    border: 2px solid #e0a838;
+}
+
+.about-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.band-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.member {
+    flex: 1 1 200px;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(69, 52, 35, 0.8); /* Darker container for members */
+    border: 2px dashed #d9534f; /* Punk-inspired border */
+    color: #fff;
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #e0a838;
+    margin-bottom: 10px;
+}
+
+.member h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #e0a838;
+}
+
+.member p {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(45, 40, 35, 0.9);
+    color: #e0a838;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-container, .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        background-color: rgba(45, 40, 35, 0.95);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+    }
+
+    nav .nav-links li {
+        margin: 15px 0;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    /* Add hamburger menu styles here if needed */
+}
 
