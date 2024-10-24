@@ -8,16 +8,16 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">Visual Mud</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="lyrics.html">Lyrics</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
 
     <!-- Main Content -->
     <main class="lyrics-container">
