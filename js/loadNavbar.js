@@ -7,12 +7,7 @@ function loadNavbar() {
             return response.text();
         })
         .then(data => {
-            const navbarPlaceholder = document.getElementById('navbar-placeholder');
-            if (navbarPlaceholder) {
-                navbarPlaceholder.innerHTML = data;
-            } else {
-                console.error('Navbar placeholder element not found.');
-            }
+            document.body.insertAdjacentHTML('afterbegin', data);
         })
         .catch(error => console.error('Error loading navigation:', error));
 }
