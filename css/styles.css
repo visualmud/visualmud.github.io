@@ -191,3 +191,67 @@ footer {
     height: 100%;
 }
 
+.album {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.album-cover {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.album-info {
+    flex: 1;
+}
+
+.album-title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.album-year {
+    margin: 5px 0 15px 0;
+    color: #666;
+}
+
+.song-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.song-list li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+/* Discography page designs */
+@media (max-width: 768px) {
+    .album {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .album-cover {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .album-info {
+        text-align: center;
+    }
+
+    .song-list {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+}
