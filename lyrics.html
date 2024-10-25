@@ -5,20 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Mud - Lyrics</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="loadNavbar.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
     <div id="navbar-placeholder"></div>
-
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading navigation:', error));
-    </script>
+    <script src="loadNavbar.js"></script>
 
     <!-- Main Content -->
     <main class="lyrics-container">
